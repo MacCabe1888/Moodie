@@ -19,13 +19,14 @@
         <h2>Our picture interpreter will use your selfie to help determine what movie you're in the mood for!</h2>
     </div>
 
-    <label class="btn btn-default">
-        Browse <input type="file" hidden>
-    </label>
+    <input id="selfie" type="file" accept="image/*" onchange="chooseImage()">
+    <div id="imgDisplay"></div>
 
-    <input class="btn btn-primary" type="submit" value="Submit"></input>
+    <input type="submit" class="btn btn-primary"> 
 
     <a class="btn btn-primary" href="page3.html" role="button">Next Step ></a>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     
 </body>
 </html>
