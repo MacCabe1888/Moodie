@@ -6,8 +6,8 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="page3.js"></script>
 </head>
 <body>
 
@@ -18,46 +18,122 @@
     </div>
 </div>
 
-<div id="quiz"></div>
+<div id="quiz">
+    <div class="container">
+            <br/>  
+        <div id="question1" class="block">
+            <h4>How comfortable are you in your current surroundings? (Please select a number between 1 and 5.)</h4>
+            <input type="checkbox"  value="1"><span> 1</span>  <br>
+            <input type="checkbox"  value="2"><span> 2</span>  <br>
+            <input type="checkbox"  value="3"><span> 3</span>  <br>
+            <input type="checkbox"  value="4"><span> 4</span>  <br>
+            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        </div>
+    
+        <div id="question2" class="block">
+            <h4>Would you rather (1) watch a movie you have seen before, or (5) watch something completely new?</h4>
+            <input type="checkbox"  value="1"><span> 1</span>  <br>
+            <input type="checkbox"  value="2"><span> 2</span>  <br>
+            <input type="checkbox"  value="3"><span> 3</span>  <br>
+            <input type="checkbox"  value="4"><span> 4</span>  <br>
+            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        </div>
+        
+        <div id="question3" class="block">
+            <h4>Do you prefer cats (1) or dogs (5)?</h4>
+            <input type="checkbox"  value="1"><span> 1</span>  <br>
+            <input type="checkbox"  value="2"><span> 2</span>  <br>
+            <input type="checkbox"  value="3"><span> 3</span>  <br>
+            <input type="checkbox"  value="4"><span> 4</span>  <br>
+            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        </div>
+        
+        <div id="question4" class="block">
+            <h4>How many roads must a man walk down before you can call him a man?</h4>
+            <input type="checkbox"  value="1"><span> 1</span>  <br>
+            <input type="checkbox"  value="2"><span> 2</span>  <br>
+            <input type="checkbox"  value="3"><span> 3</span>  <br>
+            <input type="checkbox"  value="4"><span> 4</span>  <br>
+            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        </div>
 
-<button id="submit">Submit Quiz</button>
+        <div id="question3" class="block">
+            <h4>How many roads must a man walk down before you can call him a man?</h4>
+            <input type="checkbox"  value="1"><span> I don't understand this reference.</span>  <br>
+            <input type="checkbox"  value="2"><span> He shall not pass.</span>  <br>
+            <input type="checkbox"  value="3"><span> 42</span>  <br>
+            <input type="checkbox"  value="4"><span> There can only be one!</span>  <br>
+            <input type="checkbox"  value="5"><span> The answer, my friend, is blowin in the wind.</span>  <br>  
+        </div>
+    </div>
+</div>
+
+<button id="submit" class="btn btn-success">Submit Quiz</button>
 
 <div id="results"></div>
 
 <script type="text/javascript">
  const  quizQuestions = [
      {
-        question: "Please choose a color.",
+        question: "Please select a color.",
         answers: {
-            a: "Red",
-            b: "Blue",
+            a: "Blue", 
+            b: "Purple",
             c: "Yellow",
             d: "Orange",
-            e: "Purple",
-            f: "Green",
+            e: "Red",
         }
      },
     {
-        question: "",
+        question: "How comfortable are you in your current surroundings? (Please select a number between 1 and 5.)",
         answers: {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5,
         }
      },
      {
-        question: "",
+        question: "Would you rather (1) watch a movie you have seen before, or (5) watch something completely new?",
         answers: {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5,
+
         }
      },
      {
-        question: "",
+        question: "Do you prefer cats (1) or dogs (5)?",
         answers: {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5,
+
         }
      },
      {
-        question: "",
+        question: "How many roads must a man walk down before you can call him a man?",
         answers: {
+            a: "I dont understand this reference.",
+            b: "Rosebud.",
+            c: 42,
+            d: "There can only be one",
+            e: "The answer, my friend, is blowin in the wind...",
+
         }
      }
  ]
+
+ introValue = 0;
+ extraValue = 0;
+
+
+
 
 
 </script>
