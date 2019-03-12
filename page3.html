@@ -6,8 +6,8 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <script src="page3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css"> -->
 </head>
 <body>
 
@@ -17,127 +17,42 @@
         <p class="lead">Please answer the questions below truthfully.  Your answers will help us select the movies best matching your current mood!</p>
     </div>
 </div>
+<div class="container">
 
-<div id="quiz">
-    <div class="container">
-            <br/>  
-        <div id="question1" class="block">
-            <h4>How comfortable are you in your current surroundings? (Please select a number between 1 and 5.)</h4>
-            <input type="checkbox"  value="1"><span> 1</span>  <br>
-            <input type="checkbox"  value="2"><span> 2</span>  <br>
-            <input type="checkbox"  value="3"><span> 3</span>  <br>
-            <input type="checkbox"  value="4"><span> 4</span>  <br>
-            <input type="checkbox"  value="5"><span> 5</span>  <br>  
-        </div>
+    <form id="quiz-form">
+        <div  class="block form-group">
+            <h4>Please rate your current physical comfort. Rate from uncomfortable (left) to very comfortable (right).</h4>
+            <input id="question-1" type="range" class="custom-range" min="1" max="10" step="1">
+        </div> <br>
     
-        <div id="question2" class="block">
-            <h4>Would you rather (1) watch a movie you have seen before, or (5) watch something completely new?</h4>
-            <input type="checkbox"  value="1"><span> 1</span>  <br>
-            <input type="checkbox"  value="2"><span> 2</span>  <br>
-            <input type="checkbox"  value="3"><span> 3</span>  <br>
-            <input type="checkbox"  value="4"><span> 4</span>  <br>
-            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        <div class="block form-group">
+            <h4>How awake are you? Rate from very tired (left) to very awake (right).</h4>
+            <input id="question-2" type="range" class="custom-range" min="1" max="10" step="1">
         </div>
         
-        <div id="question3" class="block">
-            <h4>Do you prefer cats (1) or dogs (5)?</h4>
-            <input type="checkbox"  value="1"><span> 1</span>  <br>
-            <input type="checkbox"  value="2"><span> 2</span>  <br>
-            <input type="checkbox"  value="3"><span> 3</span>  <br>
-            <input type="checkbox"  value="4"><span> 4</span>  <br>
-            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+        <div class="block form-group">
+            <h4>Please rate your current employment from banal (left) to inspiring (right)</h4>
+            <input id="question-3" type="range" class="custom-range" min="1" max="10" step="1">
         </div>
         
-        <div id="question4" class="block">
+        <div class="block form-group">
             <h4>How many roads must a man walk down before you can call him a man?</h4>
-            <input type="checkbox"  value="1"><span> 1</span>  <br>
-            <input type="checkbox"  value="2"><span> 2</span>  <br>
-            <input type="checkbox"  value="3"><span> 3</span>  <br>
-            <input type="checkbox"  value="4"><span> 4</span>  <br>
-            <input type="checkbox"  value="5"><span> 5</span>  <br>  
+            <input id="question-4" type="range" class="custom-range" min="1" max="10" step="1">
         </div>
 
-        <div id="question3" class="block">
-            <h4>How many roads must a man walk down before you can call him a man?</h4>
-            <input type="checkbox"  value="1"><span> I don't understand this reference.</span>  <br>
-            <input type="checkbox"  value="2"><span> He shall not pass.</span>  <br>
-            <input type="checkbox"  value="3"><span> 42</span>  <br>
-            <input type="checkbox"  value="4"><span> There can only be one!</span>  <br>
-            <input type="checkbox"  value="5"><span> The answer, my friend, is blowin in the wind.</span>  <br>  
-        </div>
-    </div>
+        <div class="block form-group">
+            <h4>How often do you read for fun? Seldom (left) or often (right)</h4>
+            <input id="question-5" type="range" class="custom-range" min="1" max="10" step="1">        </div>
+        <button type="submit" id="submit" class="btn btn-success">Submit Answers</button>
+
+    </form>
 </div>
 
-<button id="submit" class="btn btn-success">Submit Quiz</button>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/page3.js "></script>
 
-<div id="results"></div>
-
-<script type="text/javascript">
- const  quizQuestions = [
-     {
-        question: "Please select a color.",
-        answers: {
-            a: "Blue", 
-            b: "Purple",
-            c: "Yellow",
-            d: "Orange",
-            e: "Red",
-        }
-     },
-    {
-        question: "How comfortable are you in your current surroundings? (Please select a number between 1 and 5.)",
-        answers: {
-            a: 1,
-            b: 2,
-            c: 3,
-            d: 4,
-            e: 5,
-        }
-     },
-     {
-        question: "Would you rather (1) watch a movie you have seen before, or (5) watch something completely new?",
-        answers: {
-            a: 1,
-            b: 2,
-            c: 3,
-            d: 4,
-            e: 5,
-
-        }
-     },
-     {
-        question: "Do you prefer cats (1) or dogs (5)?",
-        answers: {
-            a: 1,
-            b: 2,
-            c: 3,
-            d: 4,
-            e: 5,
-
-        }
-     },
-     {
-        question: "How many roads must a man walk down before you can call him a man?",
-        answers: {
-            a: "I dont understand this reference.",
-            b: "Rosebud.",
-            c: 42,
-            d: "There can only be one",
-            e: "The answer, my friend, is blowin in the wind...",
-
-        }
-     }
- ]
-
- introValue = 0;
- extraValue = 0;
-
-
-
-
-
-</script>
-
-    
 </body>
 </html>
