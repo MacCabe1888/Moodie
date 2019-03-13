@@ -1,2 +1,2 @@
 # Moodie
-An app that generates a movie recommendation based on user data.
+An app that generates a group of five movie recommendation based on user data.
