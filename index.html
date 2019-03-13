@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moodie</title>
+    <!--link to jQuery & AJAX-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--link to Moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!--link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--link to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--link to local CSS file-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="jumbotron" id="jumbotron1">
+        <h1>Moodie</h1>
+        <h2>5 movie recommendations in 2 easy steps!</h2>
+    </div>
+
+    <div class="jumbotron" id="jumbotron2">
+        <h1>Upload a Selfie!</h1>
+        <h2>This picture interpreter will use your selfie to help determine what movies you're in the mood for!</h2>
+    </div>
+
+    <div class="jumbotron" id="jumbotron3">
+        <h1>Mood Quiz</h1>
+        <h2>Please answer the questions below truthfully. Your answers will help determine the movies best matching your current mood!</h2>
+    </div>
+
+    <div class="jumbotron" id="jumbotron4">
+        <h1>Results</h1>
+        <h2>Here are your 5 Moodie recommendations!</h2>
+    </div>
+
+    <a id="start" class="btn btn-primary">Start</a>
+    <input id="selfie" type="file" accept="image/*" onchange="readImage()">
+    <a id="submitImg" class="btn btn-primary">Submit</a>
+    <a id="toQuiz" class="btn btn-primary">Continue</a>
+    <a id="toResults" class="btn btn-primary">Show me the movies!</a>
+
+    <div class="container">
+        <div id="imgDisplay"></div>
+    </div>
+    
+    <div class="wrapper">
+
+        <form id="quiz-form">
+
+            <div class="block form-group">
+                <h4>Please rate your current physical comfort. Rate from uncomfortable (left) to very comfortable (right).</h4>
+                <input id="question-1" type="range" class="custom-range" min="1" max="10" step="1">
+            </div>
+        
+            <div class="block form-group">
+                <h4>How awake are you? Rate from very tired (left) to very awake (right).</h4>
+                <input id="question-2" type="range" class="custom-range" min="1" max="10" step="1">
+            </div>
+            
+            <div class="block form-group">
+                <h4>Please rate your current employment from banal (left) to inspiring (right)</h4>
+                <input id="question-3" type="range" class="custom-range" min="1" max="10" step="1">
+            </div>
+            
+            <div class="block form-group">
+                <h4>How many roads must a man walk down before you can call him a man?</h4>
+                <input id="question-4" type="range" class="custom-range" min="1" max="10" step="1">
+            </div>
+    
+            <div class="block form-group">
+                <h4>How often do you read for fun? Seldom (left) or often (right)</h4>
+                <input id="question-5" type="range" class="custom-range" min="1" max="10" step="1">
+            </div>
+
+            <a id="submitQuiz" class="btn btn-primary">Submit Answers</a>
+    
+        </form>
+
+    </div>
+
+    <div style="text-align: center" class="container">
+        
+            <!-- Rendered Buttons will get Dumped Here  -->
+            <div id="buttons-view" style="text-align: center"></div>
+        
+            <!-- Movies will Get Dumped Here -->
+            <div id="movies-view" style="text-align:center"></div>
+            
+    </div>
+
+    <!--link to JavaScript-->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

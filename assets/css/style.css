@@ -1,0 +1,83 @@
+body{
+    background: url("https://static1.squarespace.com/static/5b96ab4a5cfd79663cb24e0f/t/5b9d90f5352f5327a13d8457/1537052935128/antique-backdrop-background-733853.jpg?format=1500w") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.jumbotron{
+    background: sienna;
+    opacity: 0.95;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+h1{
+    color: bisque;
+}
+
+.btn-primary{
+    background: burlywood;
+    transition: background-color .75s;
+    opacity: 0.95;
+    font-size: 30px;
+    width: 100%;
+    border: 0;
+    margin-top: -30px;
+}
+
+.btn-primary:hover{
+    background: bisque;
+    color: sienna;
+}
+
+.btn-primary:active{
+    opacity: 1;
+    background: maroon;
+}
+
+input#selfie{
+    background: burlywood;
+    opacity: 0.95;
+    font-size: 30px;
+    width: 100%;
+    border: 0;
+    margin-top: -30px;
+}
+
+.container{
+    position: relative;
+    margin-right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+#imgDisplay{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrapper{
+    height: 1000px;
+}
+
+#submitQuiz{
+    opacity: 0.95;
+    margin-top: 20px;
+}
+
+button, div#resultsPage{
+    margin: 10px;
+}
+
+.movie{
+    border: 10px solid black;
+    border-width: 25px;
+    width: 70%;
+    margin: auto;
+    padding: 25px;
+}
